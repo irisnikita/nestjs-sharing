@@ -1,6 +1,8 @@
 # compiled output
 /dist
 /node_modules
+.env
+package-lock.json
 
 # Logs
 logs
@@ -26,7 +28,6 @@ lerna-debug.log*
 *.launch
 .settings/
 *.sublime-workspace
-
 # IDE - VSCode
 .vscode/*
 !.vscode/settings.json
