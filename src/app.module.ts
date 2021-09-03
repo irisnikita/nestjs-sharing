@@ -4,12 +4,17 @@ import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
 
 // Modules
-import { TodoFinalModule } from './example/todo/todo-final.module';
+import { TodoModule } from './example/todo/todo.module';
 import { TodoModule as TodoServiceModule } from './example/todo-service/todo.module';
-import { TodoModule } from './example/todo-controller/todo.module';
+import { TodoModule as TodoControllerModule } from './example/todo-controller/todo.module';
 
 @Module({
-  imports: [TodoModule, TodoServiceModule, ConfigModule.forRoot()],
+  imports: [
+    TodoControllerModule,
+    TodoModule,
+    TodoServiceModule,
+    ConfigModule.forRoot(),
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
